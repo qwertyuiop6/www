@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>小区物业网站</title>
+    <link rel="icon" href="../img/img.png">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/wuye.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="background-color: #f1f1f1;">
+<div class=""></div>
+
+<!--导航栏-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!--<img src="/img/sm.jpg" align="left" height="50" width="50" style="border-radius: 25px;">-->
+            <a class="navbar-brand" href="../index.html"><span class="glyphicon glyphicon-home"></span> 小区物业网站 </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../search.html">查询缴费 <span class="glyphicon glyphicon-jpy"></span></a></li>
+                <li><a href="../server.html">便民服务 <span class="glyphicon glyphicon-thumbs-up"></span></a></li>
+                <li class="active"><a href="../message.html">通知公告 <span class="glyphicon glyphicon-bullhorn"></span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        更多 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="../about.html">关于本站</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            <form action="/search/" class="navbar-form navbar-right" method="get" role="search">
+                <div class="form-group">
+                    <input type="text" name="search" id="search" class="form-control" placeholder="输入关键词查询">
+                    <span><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" style="color: gray"></span></button></span>
+                    <a href="" class="btn btn-primary btn-sm">用户登录</a>
+                    <!--待完成-->
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="background-color: #fff;margin-top: 60px;position: relative;">
+    <p class="text-center" style="font-size: 16px;margin-top: 15px;"><span class="glyphicon glyphicon-bell"></span> 水电费查询须知</p>
+    <hr style="width: 70%;margin: 0 auto;border-top: 1px solid #e0e0e0;">
+    <div class="box3 box5" id="box5">
+        <div class="inner">
+            <p class="text-left" STYLE="font-size: 16px;color: #3c3c3c;line-height: 1.8;">
+                第一步.进入XX小区物业网，网址为flybug.top。<br><br>
+
+                第二步.首页标题栏，点击“查询缴费”。<br><br>
+
+                第三步.进入查询页面，输入户号，即可进行查询。户号为：楼号+单元号+门牌号。<br><br>
+
+                注意： 请各位业主掌握好网上查询的方法，牢记自己的户号和密码，物业公司将及时更新最新的物业费信息。如有疑问，请拨打电
+
+                话：XXXX-XXXXXX。<br>
+            </p>
+        </div>
+    </div>
+</div>
+<!--页脚-->
+<footer style="margin-top: 10px;">
+    <div class="container">
+        <a href="about.html" class="btn btn-sm btn-info">关于本站</a>
+        <a href="mailto:771783057@qq.com" class="btn btn-info btn-sm">联系我们</a>
+        <a href="https://github.com/qwertyuiop6/---" class="btn btn-sm btn-info">Github<span class="glyphicon glyphicon-link"></span></a>
+    </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/wuye.js"></script>
+
+
+</body>
+</html>

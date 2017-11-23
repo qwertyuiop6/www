@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="image/xiaohui.jpg">
+
+    <title>安工程评课社区</title>
+
+    
+    <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"  href="css/666.css">
+
+    <style type="text/css">
+    
+       
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <img src="image/xiaohui.jpg" align="left" height="50" width="50" style="border-radius: 25px;">
+          <a class="navbar-brand" href="index.html">安徽工程大学评课社区</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">主页</a></li>
+            <li class="active"><a href="#">课程</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学院<span class="caret"></span></a>
+             <ul class="dropdown-menu">
+                <li><a href="" target="_blank">计算机与信息学院</a></li>
+                <li><a href="" target="_blank">数理学院</a></li>
+             </ul>
+              </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其他<span class="caret"></span></a>
+             <ul class="dropdown-menu">
+                <li><a href="http://www.ahpu.edu.cn/" target="_blank">安徽工程大学官网</a></li>
+                <li><a href="http://www.ahpu.edu.cn/_t114/p148c54/list.htm" target="_blank">直达教务系统</a></li> 
+             </ul>
+              </li>
+          </ul> 
+          <form class="navbar-form navbar-right desktop" action="/search/" method="get" role="search">
+                       <div class="form-group">
+                            <input type="text" name="q" class="form-control" id="search" placeholder="输入并搜索" style="width: 235px" value="">
+                       </div>
+                   <span class="desktop-wide">
+                         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search grey" aria-hidden="true"></span></button>
+                  </span>
+                  <a href="login.html" target="_blank" class="btn btn-primary 233">登录</a>
+                  <div class="personal" id="personal">
+                    <img src="image/users/1.png" height="44" width="44" style="border-radius: 22px;">
+                    <div class="information">
+                      <span></span>
+                      <div class="inner">
+                        <img src="image/users/1.png" height="44" width="44" style="border-radius: 22px; margin-bottom: 5px;">
+                        <a href="{% url 'icourse:author' user.id %}" class="button two">{{ user.first_name }}</a>
+                        <a href='{% url 'users:logout' %}' target="_blank" class="button two" id="zhucedenglu">注销</a><br>
+                      </div>  
+                    </div>  
+              </div>   
+          </form>   
+         </div>
+      </div>
+    </nav>
+
+
+
+<div class="container">
+    <div class="main">
+        <legend>课程列表</legend>
+
+      <div class="part">
+        <div class="row">
+          <div class="left0"><img src="image/gaoshu.jpg"  class="book" ></div>
+             <div class="right0">
+                 <a href="">高等数学</a><br>
+                 <a href="" style="font-size:11px;">数理学院</a>
+             </div>
+        </div>
+     </div>
+
+        <div class="part">
+          <div class="row">
+          <div class="left0"><img src="image/xiandai.png"  class="book" ></div>
+             <div class="right0">
+                 <a href="">线性代数</a><br>
+                 <a href="" style="font-size:11px;">数理学院</a>
+             </div>
+        </div>
+      </div>
+ 
+
+
+      
+        <ul class="pagination">
+        <li class=""><a><span class=>&lt;</span></a></li>
+        <li class="active"><a><span class="">1</span></a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li><a href="">&gt;</a></li>
+
+        </ul>
+      
+    </div>
+
+
+
+
+   <footer>
+      
+     
+      
+                  <a href="/about/" class="button">关于我们</a>
+                  <a href="" title="" target="_blank" class="button">新浪微博</a>
+                  <a href="771783057@qq.com" class="button">电子邮件</a>
+                
+      
+   </footer>
+</div>
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+     jQuery(document).ready(function($) {
+     $('#personal').mouseover(function(){
+     $('.information').slideDown(200);
+      })
+     $('#personal').mouseleave(function(){
+     $('.information').slideUp(200);
+      })
+     })
+    </script>
+
+  </body>
+</html>

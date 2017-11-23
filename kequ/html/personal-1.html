@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Unknown" >
+
+    <title>安工程评课社区</title>
+    <link rel="icon" href="image/xiaohui.jpg">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet"  href="css/666.css">
+    <link rel="stylesheet" href="css/photo.css">
+    <link rel="stylesheet" href="css/jquery.Jcrop.min.css">
+    <script src="js/jquery.Jcrop.min.js"></script>
+    <script src="js/jquery-2.1.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+   
+    
+
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <img src="/image/xiaohui.jpg" align="left" height="50" width="50" style="border-radius: 25px;">
+          <a class="navbar-brand" href="index.html">安徽工程大学评课社区</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">主页</a></li>
+            <li><a href="kecheng.html">课程</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学院<span class="caret"></span></a>
+             <ul class="dropdown-menu">
+                <li><a href="" target="_blank">计算机与信息学院</a></li>
+                <li><a href="">数理学院</a></li>
+             </ul>
+              </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其他<span class="caret"></span></a>
+             <ul class="dropdown-menu">
+                <li><a href="http://www.ahpu.edu.cn/" target="_blank">安徽工程大学官网</a></li>
+                <li><a href="http://www.ahpu.edu.cn/_t114/p148c54/list.htm" target="_blank">直达教务系统</a></li> 
+             </ul>
+              </li>
+          </ul> 
+          <form class="navbar-form navbar-right desktop" action="/search/" method="get" role="search">
+                  <div class="form-group">
+                            <input type="text" name="q" class="form-control" id="search" placeholder="搜索老师或课程" style="width: 235px" value="">
+                  </div>
+                  <span class="desktop-wide">
+                         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search grey" aria-hidden="true"></span></button>
+                  </span>
+                  <a href="login.html"  class="btn btn-primary 233" id="zhuyedenglu">登录</a>
+              <div class="personal" id="personal">
+                    <img src="image/users/1.png" height="44" width="44" style="border-radius: 22px;">
+                    <div class="information">
+                      <span></span>
+                      <div class="inner">
+                          <p class="user-n">用户名称</p>
+                          <hr>
+                          <a class="button three" href="personal-1.html">个人信息</a>
+                          <a class="button three" href="">退出登录</a>
+                          
+                      </div>  
+                    </div>  
+              </div>   
+          </form>   
+         </div>
+      </div>
+    </nav>
+<div class="col-md-10">
+<div id="change-tx" class="well clearfix">
+    <h1>头像设置</h1>
+   
+    <div>
+        <div class="change-tx-left">
+            <div class="screen-tx">
+                <img id="tmp-tx"  src="" alt="">
+                
+            </div>
+            
+            <form role="form" id="upload-tx-form">
+                <div class="form-group">
+                    <input type="button" id="save-tx" class="btn btn-vmaig-auth" value="保存头像">
+                    <button type="button" class="btn btn-info">选择图片</button>
+                    <input type="file" id="upload-tx" name="upload-tx">
+                </div>
+            </form>
+        </div>
+        <div class="change-tx-right">
+            <h4>头像预览</h4>
+            <div id="preview-pane">
+                <div class="preview-container" style="width:100px;height:100px;overflow:hidden;">
+                    <img  src="image/bj12.jpg" alt="">
+                </div>
+            </div>
+            大头像 100x100
+        </div>
+    </div>
+    <!--
+    <p>方法一：选择本地照片，上传编辑自己的头像</p>
+    <button class="btn btn-vmaig">选择图片</button>支持jpg、jpeg、gif、png、bmp格式的图片
+    <p>方法二：选择推荐头像，快速上传优质头像</p>
+    -->
+
+
+              
+</div>
+    
+    
+
+<script language="javascript" type="text/javascript">
+
+var jcrop_api,boundx,boundy;
+var image = new Image();
+var x,y,width,height = 0;
+
+$('#tmp-tx').Jcrop({onChange: updatePreview,
+                    onSelect: updatePreview,
+                    aspectRatio:1,
+                    boxWidth:400,
+                    boxHeight:300},
+                    function(){
+                        jcrop_api = this;
+                   });
+
+$("#upload-tx").change(function(){
+
+    if(typeof FileReader == "undefined"){
+        alert("您的浏览器不支持FileReader对象！");
+    }
+
+    var file = this.files[0];
+    var reader = new FileReader();
+
+    reader.readAsDataURL(file);
+
+    
+    reader.onload=function(e){
+        image.src = e.target.result;
+        $("#tmp-tx").attr("src",image.src);
+        $("#preview-pane .preview-container img").attr("src",image.src);
+        jcrop_api.setImage(image.src);
+        preImage(image.src,function(){
+                boundx = this.width;
+                boundy = this.height;
+            });
+        
+        console.log("boundx:"+boundx+" boundy:"+boundy);
+    }
+
+    
+});
+
+$("#save-tx").click(function(){
+    console.log("x:"+x+" y:"+y+" width:"+width+" height:"+height);
+
+    var canvas=$('<canvas width="'+width+'" height="'+height+'"></canvas>')[0],
+    ctx=canvas.getContext('2d');
+
+    ctx.drawImage(image,parseInt(x),parseInt(y),parseInt(width),parseInt(height),0,0,parseInt(width),parseInt(height));
+
+    var data=canvas.toDataURL();
+
+    // dataURL 的格式为 “data:image/png;base64,****”,逗号之前都是一些说明性的文字，我们只需要逗号之后的就行了
+    data=data.split(',')[1];
+    data=window.atob(data);
+    var ia = new Uint8Array(data.length);
+    for (var i = 0; i < data.length; i++) {
+        ia[i] = data.charCodeAt(i);
+    };
+
+    // canvas.toDataURL 返回的默认格式就是 image/png
+    var blob=new Blob([ia], {type:"image/jpg"});
+
+    var fd=new FormData();
+
+    fd.append('file',blob);
+    $.ajax({
+        url:"/usercontrol/changetx",
+        type:"POST",
+        data:{"tx":canvas.toDataURL().split(',')[1]},
+        beforeSend:function(xhr){
+            xhr.setRequestHeader("X-CSRFToken", $.cookie('csrftoken'));  
+        },
+        success:function(data,textStatus){
+            alert(data);
+            location.reload();
+        },
+        error:function(XMLHttpRequest, textStatus, errorThrown){
+            alert(XMLHttpRequest.responseText);
+        }
+
+    });
+
+});
+
+
+function preImage(url,callback){  
+    var img = new Image(); //创建一个Image对象，实现图片的预下载  
+    img.src = url;  
+ 
+    if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数  
+        callback.call(img);  
+        return; // 直接返回，不用再处理onload事件  
+    }  
+
+    img.onload = function () { //图片下载完毕时异步调用callback函数。  
+        callback.call(img);//将回调函数的this替换为Image对象  
+    };  
+}  
+
+function updatePreview(c){
+     if (parseInt(c.w) > 0) {
+        x = c.x;
+        y = c.y;
+        width = c.w;
+        height = c.h;
+        var rx = 100.0 / c.w;
+        var ry = 100.0 / c.h;
+
+        console.log("rx:"+ Math.round(rx * boundx)+" ry:"+ry);
+        
+        $("#preview-pane .preview-container img").css({
+            width: Math.round(rx * boundx) + 'px',
+            height: Math.round(ry * boundy) + 'px',
+            marginLeft: '-' + Math.round(rx * c.x) + 'px',
+            marginTop: '-' + Math.round(ry * c.y) + 'px'
+        });
+    }
+}
+ 
+</script>
+    </div>
+<script> jQuery(document).ready(function($) {
+     $('#personal').mouseover(function(){
+     $('.information').slideDown(200);
+      })
+     $('#personal').mouseleave(function(){
+     $('.information').slideUp(200);
+      })
+     })
+</script>
+
+</body>
+    <script type="text/javascript" src="js/vmaig.js"></script>
+</html>

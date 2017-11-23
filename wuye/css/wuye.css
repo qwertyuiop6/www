@@ -1,0 +1,126 @@
+.box{
+    width: 100%;
+    padding: 10px 0px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+    margin-top: 1px;
+    box-shadow: 1px 1px 4px rgba(60, 60, 60, 0.17);
+    border-radius: 3px;
+    border-top: 3px solid #58c0ff;
+    background-color: #fff;
+    position: relative;
+    /*height:250px;*/
+}
+
+@media (min-width:720px) {
+    .box{
+        height:250px;
+    }
+    .rright{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 9px;
+    }
+    .box3{
+        width:70%;
+        position: relative;
+        margin:0 auto;
+        padding:20px 20px;
+        height:850px;
+    }
+    .box4{
+        border:1px solid #e6e6e6;
+        margin-bottom:20px;
+        height:760px;
+        width:80%;
+        padding:30px 20px;
+    }
+    .box5{
+        border:1px solid #e6e6e6;
+        padding:35px 20px;
+        margin:15px auto 30px;
+        height:760px;
+    }
+    .nav-wuye{
+        margin: 15px auto;width: 80%;
+
+    }
+    .carousel1{
+        height:540px;
+    }
+    .fuck1{
+      margin-bottom: 4%;
+    }
+    .fuck2{
+    margin-bottom: 5%;
+    }
+}
+@media (max-width:720px) {
+    .box{
+        height:385px;
+    }
+    .rright{
+        display: none;
+    }
+    .box3{
+
+        position: relative;
+        margin:0 auto;
+        padding:20px 10px;
+        height:550px;
+    }
+    .box4{
+        border:1px solid #e6e6e6;
+        margin-bottom:20px;
+        height:460px;
+        width:90%;
+    }
+    .nav-wuye{
+        margin: 15px auto;width: 90%;
+    }
+    .carousel1{
+        height: 170px;
+    }
+    .fuck1{
+      margin-bottom: 1%;
+    }
+    .fuck2{
+      margin-bottom: 3%;
+    }
+}
+.box1{
+    width:50%;
+    float: left;
+    /*border:  dashed grey;*/
+    /*border-width: 0px;*/
+    /*border-right-width: 2px;*/
+}
+.box2{
+    width:45%;
+    float: right;
+}
+
+.hr{
+    width: 80%;margin-top: 0;
+    margin-bottom:10px;border-top: 1px solid #e4e4e4;
+}
+.inner{
+    width:80%;
+    margin-left:10%;
+
+}
+.list-unstyled>li{
+    margin-bottom:5px;
+    font-size: 15px;
+}
+.show{
+    color:grey;
+    font-size:15px;
+    margin-bottom:40px;
+    margin-left:20px;
+    float: left;
+}

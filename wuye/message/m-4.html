@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>小区物业网站</title>
+    <link rel="icon" href="../img/img.png">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/wuye.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="background-color: #f1f1f1;">
+<div class=""></div>
+
+<!--导航栏-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!--<img src="/img/sm.jpg" align="left" height="50" width="50" style="border-radius: 25px;">-->
+            <a class="navbar-brand" href="../index.html"><span class="glyphicon glyphicon-home"></span> 小区物业网站 </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../search.html">查询缴费 <span class="glyphicon glyphicon-jpy"></span></a></li>
+                <li><a href="../server.html">便民服务 <span class="glyphicon glyphicon-thumbs-up"></span></a></li>
+                <li class="active"><a href="../message.html">通知公告 <span class="glyphicon glyphicon-bullhorn"></span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        更多 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="../about.html">关于本站</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            <form action="/search/" class="navbar-form navbar-right" method="get" role="search">
+                <div class="form-group">
+                    <input type="text" name="search" id="search" class="form-control" placeholder="输入关键词查询">
+                    <span><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" style="color: gray"></span></button></span>
+                    <a href="" class="btn btn-primary btn-sm">用户登录</a>
+                    <!--待完成-->
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="background-color: #fff;margin-top: 60px;position: relative;">
+    <p class="text-center" style="font-size: 16px;margin-top: 15px;"><span class="glyphicon glyphicon-list-alt"></span> 非机动车辆停放管理规定</p>
+    <p class="rright" style="top: 30px;right: 16%;">8-25</p>
+    <hr style="width: 70%;margin: 0 auto;border-top: 1px solid #e0e0e0;">
+    <div class="box3 box5" id="box5">
+        <div class="inner">
+            <p class="text-left" STYLE="font-size: 16px;color: #3c3c3c;line-height: 1.8;">
+                第一条 进入小区的自行车必须要在规定停车处内停放。车辆停放时要整齐摆放。小区住户的自行车严禁在楼道、地下室通道以及其它公共场所随意停放，夜晚自行车要停放在地下室或存车库。<br><br>
+                第二条 小区住户的摩托车一律存放到车库内。严禁在室外、地下室通道以及其它公共场所随意停放。
+            </p>
+        </div>
+    </div>
+</div>
+<!--页脚-->
+<footer style="margin-top: 10px;">
+    <div class="container">
+        <a href="about.html" class="btn btn-sm btn-info">关于本站</a>
+        <a href="mailto:771783057@qq.com" class="btn btn-info btn-sm">联系我们</a>
+        <a href="https://github.com/qwertyuiop6/---" class="btn btn-sm btn-info">Github<span class="glyphicon glyphicon-link"></span></a>
+    </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/wuye.js"></script>
+
+
+</body>
+</html>

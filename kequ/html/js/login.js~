@@ -1,0 +1,140 @@
+$(function(){
+	
+	$('#switch_denglu').click(function(){
+		$('#switch_zhuce').removeClass("switch_btn_focus").addClass('switch_btn');
+		$('#switch_denglu').removeClass("switch_btn").addClass('switch_btn_focus');
+		$('#switch_bottom').animate({left:'0px',width:'60px'});
+		$('#zhuce').css('display','none');
+		$('#denglu').css('display','block');
+		
+		});
+	$('#switch_zhuce').click(function(){
+		
+		$('#switch_zhuce').removeClass("switch_btn").addClass('switch_btn_focus');
+		$('#switch_denglu').removeClass("switch_btn_focus").addClass('switch_btn');
+		$('#switch_bottom').animate({left:'138px',width:'60px'});
+		
+		$('#zhuce').css('display','block');
+		$('#denglu').css('display','none');
+		});
+if(getParam("a")=='0')
+{
+	$('#switch_zhuce').trigger('click');
+}
+
+	});
+	
+function logintab(){
+	scrollTo(0);
+	$('#switch_denglu').removeClass("switch_btn_focus").addClass('switch_btn');
+	$('#switch_zhuce').removeClass("switch_btn").addClass('switch_btn_focus');
+	$('#switch_bottom').animate({left:'138px',width:'90px'});
+	$('#zhuce').css('display','none');
+	$('#denglu').css('display','block');
+	
+}
+
+
+
+function getParam(pname) { 
+    var params = location.search.substr(1);  
+    var ArrParam = params.split('&'); 
+    if (ArrParam.length == 1) { 
+        
+        return params.split('=')[1]; 
+    } 
+    else { 
+     
+        for (var i = 0; i < ArrParam.length; i++) { 
+            if (ArrParam[i].split('=')[0] == pname) { 
+                return ArrParam[i].split('=')[1]; 
+            } 
+        } 
+    } 
+}  
+
+
+var reMethod = "GET",
+	pwdmin = 6;
+
+$(document).ready(function() {
+
+
+	$('#reg').click(function() {
+
+		if ($('#user').val() == "") {
+			$('#user').focus().css({
+				border: "1px solid red",
+				boxShadow: "0 0 2px red"
+			});
+			$('#userCue').html("<font color='red'><b></b></font>");
+			return false;
+		}
+
+
+
+		if ($('#user').val().length < 4 || $('#user').val().length > 16) {
+
+			$('#user').focus().css({
+				border: "1px solid red",
+				boxShadow: "0 0 2px red"
+			});
+			$('#userCue').html("<font color='red'><b></b></font>");
+			return false;
+
+		}
+		$.ajax({
+			type: reMethod,
+			url: "/member/ajaxyz.php",
+			data: "uid=" + $("#user").val() + '&temp=' + new Date(),
+			dataType: 'html',
+			success: function(result) {
+
+				if (result.length > 2) {
+					$('#user').focus().css({
+						border: "1px solid red",
+						boxShadow: "0 0 2px red"
+					});$("#userCue").html(result);
+					return false;
+				} else {
+					$('#user').css({
+						border: "1px solid #D7D7D7",
+						boxShadow: "none"
+					});
+				}
+
+			}
+		});
+
+
+		if ($('#passwd').val().length < pwdmin) {
+			$('#passwd').focus();
+			$('#userCue').html("<font color='red'><b> + pwdmin + "»</b></font>");
+			return false;
+		}
+		if ($('#passwd2').val() != $('#passwd').val()) {
+			$('#passwd2').focus();
+			$('#userCue').html("<font color='red'><b></b></font>");
+			return false;
+		}
+
+		var sqq = /^[1-9]{1}[0-9]{4,9}$/;
+		if (!sqq.test($('#qq').val()) || $('#qq').val().length < 5 || $('#qq').val().length > 12) {
+			$('#qq').focus().css({
+				border: "1px solid red",
+				boxShadow: "0 0 2px red"
+			});
+			$('#userCue').html("<font color='red'><b></b></font>");return false;
+		} else {
+			$('#qq').css({
+				border: "1px solid #D7D7D7",
+				boxShadow: "none"
+			});
+			
+		}
+
+		$('#regUser').submit();
+	});
+	
+
+});

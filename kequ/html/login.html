@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="image/xiaohui.jpg">
+
+    <title>登录页面</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+
+
+    <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    
+
+
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/666.css">
+
+    <style type="text/css">
+      body{background: url(image/bj61.jpg) no-repeat;
+          background-size: cover;
+          min-height: 1200px;
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+      .footer{position: absolute;
+        top: 1120px;
+        width: 100%;}
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  
+<div class="container">
+    
+<div class="form-signin" style="margin-top:20px;" id="form">
+     <div class="header" id="header">
+        <div class="switch" id="switch"><a class="switch_btn_focus" id="switch_denglu" href="javascript:void(0);" tabindex="7" >快速登录</a>
+             <a class="switch_btn" id="switch_zhuce" href="javascript:void(0);" tabindex="8" style="margin-left:70px;">快速注册</a><div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 60px; left: 0px;"></div>
+             
+        </div>
+    </div> 
+
+    <div id="denglu" class="signin" style="display:block;"> 
+    
+      <form method="post" action="">
+       
+        <label for="inputtext" class="sr-only">用户名</label>
+        <input type="email" id="inputtext" class="form-control" style="margin-top:15px" placeholder="请输入您的用户名" required autofocus>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" id="inputPassword" class="form-control" style="margin-top:15px" placeholder="请输入您的密码" required>
+        <div class="checkbox">
+             <label>
+            <input type="checkbox" value="remember-me"> 记住此账号
+             </label>
+
+            
+            <a href="/password/reset" class="kaoyou">忘记密码</a>
+         
+        </div>
+           <button class="btn btn-lg btn-primary btn-block" type="submit">确认登录</button>
+      </form>
+
+    </div>
+
+    <div id="zhuce" class="signup" style="display:none;">
+        <form name="form" id="regUser" accept-charset="utf-8"  action="" method="post">
+             <input type="hidden" name="to" value="reg"/>
+             <input type="hidden" name="did" value="0"/>
+         
+            
+                
+                <label for="user"  class="input-tips2">用户名：</label>
+                    <div class="inputOuter2">
+                        <input type="text" id="user" name="username1" maxlength="16" class="form-control" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('不能为空!')"/>
+                    </div>
+                
+                
+                
+                <label for="passwd" class="input-tips2">密码：</label>
+                    <div class="inputOuter2">
+                        <input type="password" id="passwd"  name="password1" maxlength="16" class="form-control"/>
+                    </div>
+                    
+                
+                <label for="password" class="input-tips2">确认密码：</label>
+                    <div class="inputOuter2">
+                        <input type="password" id="password" name="password2" maxlength="16" class="form-control" />
+                    </div>
+                    
+                
+                
+                
+                 <label for="email" class="input-tips2">Email：</label>
+                    <div class="inputOuter2">
+                       
+                        <input type="email" id="email" name="email" maxlength="30" class="form-control"/>
+                    </div>
+                
+                
+                    
+                <div class="cl"></div>
+                <a href="javascript:zhuce()"><button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top:10px;">注册</button></a>
+            </form>
+      </div>
+      <div style="position:absolute;right:0px;top:0px;" id="fanhui"><a href="index.html" class="guan">×</a></div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+ <!-- /container -->
+ 
+ <div class="footer">
+  <hr/>
+     <marquee scrollamount=13><font color="#999">*推荐使用ie8或以上版本ie浏览器或Chrome内核浏览器访问本站</font></marquee> 
+ </div>
+
+<script>
+       
+   
+</script>
+ </body>
+    
+</html>
